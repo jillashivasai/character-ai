@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GojoSatoru from "./components/GojoSatoru";
+import { Routes, Route } from "react-router-dom";
+import HyperGot from "./components/HyperGlot";
+import Discovery from "./components/Discovery";
+import Newcharecter from "./components/NewCharecter/newcharecter";
+import Comingsoon from "./components/ComingSoon/comingsoon";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path='/' element={<Discovery/>}/>
+        <Route path="/gojosatoru" element={<GojoSatoru />} />
+        <Route path="/hyperglot" element={<HyperGot />} />
+        <Route path="/discovery" element={<Discovery />} />
+        <Route path="/newcharecter" element={<Newcharecter />} />
+        <Route path="/comingsoon" element={<Comingsoon/>}/>
+        </Routes>
     </div>
   );
 }

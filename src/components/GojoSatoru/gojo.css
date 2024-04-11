@@ -1,0 +1,11 @@
+.rows {
+    display: flex;
+    flex-direction: row;
+    /* Ensure the components are laid out horizontally */
+}
+.align-right{
+    
+}
+.position{
+    position: fixed;
+}
